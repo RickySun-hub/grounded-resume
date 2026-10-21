@@ -1,10 +1,18 @@
 # Grounded Resume
 
+An open-source resume utility by [ProofRound](https://getproofround.com).
+
 **A practical skill for tailoring resumes from a reviewed source profile.**
 
 Turn a master profile and job description into a focused, one-page resume. Every selected bullet stays linked to its source, wording changes remain reviewable, and the local Python pipeline produces a PDF with automated checks and a visual review step.
 
 Grounded Resume is a small document-workflow utility for data, analytics and ML candidates. An AI assistant helps select and edit supported content; Python handles ranking, rendering and mechanical checks.
+
+## From resume to interview
+
+Once your resume is ready, can you explain and defend every line? [ProofRound](https://getproofround.com) is a product preview focused on checking whether resume claims can stand up to technical follow-up questions.
+
+Grounded Resume runs independently: no ProofRound account or connection is required, and its Python scripts do not send your profile to the website.
 
 ## A small example
 
