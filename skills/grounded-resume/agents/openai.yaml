@@ -1,0 +1,4 @@
+interface:
+  display_name: "Grounded Resume"
+  short_description: "Build resumes with traceable evidence and PDF review"
+  default_prompt: "Use $grounded-resume to tailor my verified profile to this job description and inspect the resulting PDF."

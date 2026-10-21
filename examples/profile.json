@@ -1,0 +1,119 @@
+{
+  "contact": {
+    "name": "Alex Example",
+    "location": "Example City",
+    "phone": "202-555-0100",
+    "email": "alex@example.com",
+    "linkedin": "example.com/alex"
+  },
+  "education": {
+    "institution": "Example University",
+    "location": "Example City",
+    "degree": "B.S. in Applied Mathematics",
+    "dates": "2022 - 2026",
+    "honors": "Fictional demonstration profile"
+  },
+  "skills": {
+    "Programming and data": [
+      "Python",
+      "SQL",
+      "pandas",
+      "NumPy"
+    ],
+    "Machine learning": [
+      "scikit-learn",
+      "regression",
+      "cross-validation",
+      "model evaluation"
+    ],
+    "Analytics and visualization": [
+      "Excel",
+      "visualization"
+    ],
+    "Research computing": [
+      "Git",
+      "Linux"
+    ]
+  },
+  "items": [
+    {
+      "id": "analytics-lab",
+      "kind": "role",
+      "name": "Example Analytics Lab",
+      "title": "Student Analyst",
+      "location": "Example City",
+      "dates": "2025 - 2026",
+      "bullets": [
+        {
+          "source_text": "Built Python and SQL checks for a synthetic sales dataset containing 12000 rows, flagging duplicate records before analysis."
+        },
+        {
+          "source_text": "Analyzed weekly trends with pandas and documented missing-value handling so another student could reproduce the report."
+        },
+        {
+          "source_text": "Created visualizations comparing regional order volume and explained the limits of the synthetic data to a class team."
+        },
+        {
+          "source_text": "Used Git to track analysis changes and wrote setup instructions for a reproducible local Python environment."
+        }
+      ]
+    },
+    {
+      "id": "data-clinic",
+      "kind": "role",
+      "name": "Example Student Data Clinic",
+      "title": "Volunteer Analyst",
+      "location": "Example City",
+      "dates": "2025 - 2026",
+      "bullets": [
+        {
+          "source_text": "Cleaned 8 synthetic CSV tables with Python and checked joins against documented record counts."
+        },
+        {
+          "source_text": "Wrote SQL summaries of order totals and reconciled results with spreadsheet calculations before sharing findings."
+        },
+        {
+          "source_text": "Documented data definitions and known missing fields to prevent the class team from treating missing observations as zero."
+        }
+      ]
+    },
+    {
+      "id": "forecasting",
+      "kind": "project",
+      "name": "Demand Forecasting Study",
+      "title": "",
+      "location": "",
+      "dates": "2025 - 2026",
+      "bullets": [
+        {
+          "source_text": "Compared regression baselines on a synthetic time series using a chronological train and test split to avoid leakage."
+        },
+        {
+          "source_text": "Evaluated prediction errors by week with scikit-learn and documented where the baseline performed poorly."
+        },
+        {
+          "source_text": "Packaged feature preparation and model evaluation in a reproducible Python script with a fixed random seed."
+        }
+      ]
+    },
+    {
+      "id": "quality-tool",
+      "kind": "project",
+      "name": "Data Quality Toolkit",
+      "title": "",
+      "location": "",
+      "dates": "2025 - 2026",
+      "bullets": [
+        {
+          "source_text": "Built a Python command-line tool that validates schemas, missing values and duplicate keys in fictional order data."
+        },
+        {
+          "source_text": "Added regression checks for malformed rows and produced a readable report of validation failures."
+        },
+        {
+          "source_text": "Documented SQL examples for investigating failed joins and retained small synthetic fixtures for repeatable testing."
+        }
+      ]
+    }
+  ]
+}
