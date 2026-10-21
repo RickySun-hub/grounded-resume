@@ -54,6 +54,29 @@ Source links show where a claim came from; they do not independently verify the 
 
 ## Install the skill
 
+### Easiest: ask your agent
+
+Copy the following message into Codex. This is a chat message, not a terminal command:
+
+```text
+Please install Grounded Resume from:
+https://github.com/RickySun-hub/grounded-resume/tree/main/skills/grounded-resume
+
+Use your skill installer if available and the skill directory supported by this installation. Check Python, the bundled requirements.txt, Tectonic and Poppler. Help me install any missing dependencies using an isolated Python environment where possible, respecting this machine's permissions. Run the bundled fictional demo and tell me whether PDF generation works. Do not overwrite an existing skill without checking it first. Do not install MCP or connect any accounts.
+```
+
+The agent needs internet access, local file access and permission to run commands. It may need your approval for system dependencies. Downloading the skill alone does not install its PDF tools. If your agent cannot install something, ask it to explain the missing step rather than report success. Other agents can use the same request when they support local skills and shell execution; Claude Code has not been runtime-tested here.
+
+After the agent confirms setup, send:
+
+```text
+Use Grounded Resume to tailor my resume to this job description. Help me prepare the source profile from my resume first, ask about unclear facts, and show me the PDF for review.
+```
+
+Attach your resume and the job description to that message. If the new skill is not detected, start a new agent session and try again.
+
+### Manual installation
+
 Download this repository as a ZIP or clone it. Copy the entire `skills/grounded-resume` folder, including its scripts, examples and dependency list, into the appropriate location:
 
 | Agent | Personal installation | Project installation | Invocation |
@@ -61,7 +84,7 @@ Download this repository as a ZIP or clone it. Copy the entire `skills/grounded-
 | Codex | `~/.agents/skills/grounded-resume` | `.agents/skills/grounded-resume` | `$grounded-resume` |
 | Claude Code | `~/.claude/skills/grounded-resume` | `.claude/skills/grounded-resume` | `/grounded-resume` |
 
-On Windows, `~` refers to your user directory. These paths follow the current [Codex](https://developers.openai.com/codex/skills/) and [Claude Code](https://code.claude.com/docs/en/skills) documentation. The skill uses the [Agent Skills format](https://agentskills.io/specification); other hosts need file access, shell execution and image inspection. Claude Code compatibility is based on its documented format, not a completed runtime test.
+On Windows, `~` refers to your user directory. These paths follow the current [Codex](https://developers.openai.com/codex/skills/) and [Claude Code](https://code.claude.com/docs/en/skills) documentation. Some Codex versions or bundled installers use `$CODEX_HOME/skills` or `~/.codex/skills`; prefer the location recognized by your installed agent. The skill uses the [Agent Skills format](https://agentskills.io/specification); other hosts need file access, shell execution and image inspection. Claude Code compatibility is based on its documented format, not a completed runtime test.
 
 Install the dependencies below, then start a new agent session. For Codex:
 
