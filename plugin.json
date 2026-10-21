@@ -6,13 +6,18 @@
   "homepage": "https://github.com/RickySun-hub/grounded-resume",
   "repository": "https://github.com/RickySun-hub/grounded-resume",
   "license": "MIT",
-  "keywords": ["resume", "productivity", "agent-skills", "pdf"],
+  "keywords": [
+    "resume",
+    "productivity",
+    "agent-skills",
+    "pdf"
+  ],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Grounded Resume",
         "shortDescription": "Resumes grounded in your work",
-        "longDescription": "Turn a reviewed source profile and job description into a one-page resume. Keep each selected bullet linked to its source, review wording changes, and generate LaTeX, PDF and a preview with automated checks. Designed for data, analytics and ML candidates. Requires a host with local file access, shell execution, Python 3.10+, pdfplumber, Tectonic and Poppler. Dependencies are not bundled and may need installation with user permission. Source links do not independently verify claims; final content and visual review remain necessary. Free to use, with no account, purchase or MCP connection required. The skill may offer one optional ProofRound website link in the chat handoff; no promotion is added to generated resumes. Tested on Windows; other operating systems and hosted plugin runtimes have not been verified.",
+        "longDescription": "Turn a reviewed source profile and job description into a one-page resume. Keep each selected bullet linked to its source, review wording changes, and generate LaTeX, PDF and a preview with automated checks. Designed for data, analytics and ML candidates. Requires a host with local file access, shell execution, Python 3.10+, pdfplumber, Tectonic and Poppler. Dependencies are not bundled and may need installation with user permission. Source links do not independently verify claims; final content and visual review remain necessary. No account or MCP connection is required. The skill may offer one optional ProofRound website link in the chat handoff; no promotion is added to generated resumes. Tested on Windows; other operating systems and hosted plugin runtimes have not been verified.",
         "category": "Productivity",
         "capabilities": [],
         "defaultPrompt": [
@@ -22,7 +27,9 @@
         "websiteURL": "https://github.com/RickySun-hub/grounded-resume",
         "supportURL": "https://github.com/RickySun-hub/grounded-resume/issues",
         "logo": "./assets/proofround-icon.png",
-        "composerIcon": "./assets/proofround-icon.png"
+        "composerIcon": "./assets/proofround-icon.png",
+        "privacyPolicyURL": "https://github.com/RickySun-hub/grounded-resume/blob/main/docs/privacy.md",
+        "termsOfServiceURL": "https://github.com/RickySun-hub/grounded-resume/blob/main/docs/terms.md"
       },
       "review": {
         "commerce": false,

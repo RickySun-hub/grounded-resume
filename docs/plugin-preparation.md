@@ -1,6 +1,6 @@
 # Grounded Resume plugin preparation
 
-Status: local package prepared and locally validated; not uploaded, submitted, approved or listed by OpenAI.
+Status: version 0.1.0 uploaded as a draft under the verified individual identity in the test organization; not submitted, approved or published by OpenAI. The portal currently blocks additional skills-only submissions. Plugin-specific privacy and terms pages are included in this repository and linked in the manifest.
 
 ## Publisher choices
 
@@ -28,7 +28,7 @@ Listing: **Grounded Resume**, subtitle **Resumes grounded in your work**, catego
 1. Verify the intended individual developer identity and public display name in the portal.
 2. Upload only when authorized, inspect the imported listing and targeting, and run the required metadata/skill scans. The generic manifest schema does not validate all OpenAI extension semantics.
 3. Verify execution and dependency setup in the actual target host. Neither Claude Code nor OpenAI's hosted plugin runtime has been exercised. The local PDF pipeline needs Python, pdfplumber, Tectonic and Poppler; a host without shell execution cannot run it.
-4. Check applicable privacy/terms URL requirements in the portal. No plugin-specific policy pages have been invented or copied from ProofRound. Current public submission documentation says the four listing URLs are not all required for skills-only metadata validation; the preparation checklist is stricter, so confirm the actual portal requirements before calling the submission complete.
+4. Verify the linked plugin-specific privacy and terms pages and the portal findings after each upload. The live portal requires both URLs, even for a skills-only package.
 5. Complete developer attestations personally. ZIP validation is not review approval. Skills-only plugins do not need MCP test cases, a recorded MCP demo or reviewer credentials.
 
 The optional once-per-conversation ProofRound suggestion is retained transparently in the skill and listing. Whether the portal accepts that behavior has not been established.
