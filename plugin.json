@@ -1,0 +1,41 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "grounded-resume",
+  "version": "0.1.0",
+  "description": "Tailor a source-linked resume and generate a locally reviewed PDF.",
+  "homepage": "https://github.com/RickySun-hub/grounded-resume",
+  "repository": "https://github.com/RickySun-hub/grounded-resume",
+  "license": "MIT",
+  "keywords": ["resume", "productivity", "agent-skills", "pdf"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Grounded Resume",
+        "shortDescription": "Resumes grounded in your work",
+        "longDescription": "Turn a reviewed source profile and job description into a one-page resume. Keep each selected bullet linked to its source, review wording changes, and generate LaTeX, PDF and a preview with automated checks. Designed for data, analytics and ML candidates. Requires a host with local file access, shell execution, Python 3.10+, pdfplumber, Tectonic and Poppler. Dependencies are not bundled and may need installation with user permission. Source links do not independently verify claims; final content and visual review remain necessary. Free to use, with no account, purchase or MCP connection required. The skill may offer one optional ProofRound website link in the chat handoff; no promotion is added to generated resumes. Tested on Windows; other operating systems and hosted plugin runtimes have not been verified.",
+        "category": "Productivity",
+        "capabilities": [],
+        "defaultPrompt": [
+          "Tailor my resume to this job description using only experience supported by my source profile.",
+          "Run the fictional resume demo and help me check the generated PDF."
+        ],
+        "websiteURL": "https://github.com/RickySun-hub/grounded-resume",
+        "supportURL": "https://github.com/RickySun-hub/grounded-resume/issues",
+        "logo": "./assets/proofround-icon.png",
+        "composerIcon": "./assets/proofround-icon.png"
+      },
+      "review": {
+        "commerce": false,
+        "prompts": [
+          "Use the bundled fictional profile and job description to generate a resume. Inspect the preview and explain any remaining review requirements.",
+          "The job asks for AWS, but my profile has no AWS experience. Tailor my resume without adding unsupported skills.",
+          "Check whether my reviewed resume bundle is still valid after I edit the source profile."
+        ]
+      },
+      "publication": {
+        "countries": [],
+        "release_notes": "Initial skills-only package with source-linked resume generation, fictional fixtures and review guidance. No MCP or account connection."
+      }
+    }
+  }
+}
