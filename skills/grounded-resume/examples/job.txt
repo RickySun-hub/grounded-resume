@@ -1,0 +1,5 @@
+FICTIONAL TEST POSTING — not an active vacancy.
+Example Analytics — Data Analyst
+Responsibilities: Analyze datasets using Python and SQL, validate data quality, build visualizations and communicate findings.
+Required Qualifications: Python, SQL, pandas, statistics and clear documentation.
+Preferred Qualifications: Tableau and AWS.

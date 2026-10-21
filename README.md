@@ -1,10 +1,28 @@
 # Grounded Resume
 
-**A resume workflow with evidence you can trace.**
+**A practical skill for tailoring resumes from a reviewed source profile.**
 
-Grounded Resume is a reusable Codex skill and local Python pipeline for tailoring a one-page resume to a job description. It selects from a reviewed candidate profile, keeps source links for every bullet, produces a LaTeX/PDF bundle, and records review against the exact output files.
+Turn a master profile and job description into a focused, one-page resume. Every selected bullet stays linked to its source, wording changes remain reviewable, and the local Python pipeline produces a PDF with automated checks and a visual review step.
 
-The goal is clearer presentation of real experience. Keyword matches are ranking hints, not qualifications. There are no interview guarantees, ATS scores, auto-apply features, or fabricated achievements.
+Grounded Resume is a small document-workflow utility for data, analytics and ML candidates. An AI assistant helps select and edit supported content; Python handles ranking, rendering and mechanical checks.
+
+## A small example
+
+The bundled candidate and job posting are fictional:
+
+| Step | Example |
+| --- | --- |
+| Source profile | Built Python and SQL checks for a synthetic sales dataset containing 12000 rows, flagging duplicate records before analysis. |
+| Job requirement | Analyze datasets using Python and SQL; validate data quality. |
+| Selection | The bullet mentions Python, SQL and data checks, so it is relevant to this requirement. |
+| Resume output | The original bullet is retained with its source ID; any later wording change remains available for review in the plan. |
+
+<details>
+<summary>See the fictional PDF preview</summary>
+
+![One-page resume generated from a fictional profile](docs/demo-preview.png)
+
+</details>
 
 ## How it works
 
@@ -22,18 +40,27 @@ LaTeX + PDF → automated checks → visual inspection → candidate review
 - **Readable output:** a single-column US Letter template, extractable text, round bullets and bounded layout fitting.
 - **Review integrity:** PDF, preview, source and generator hashes help detect changes after inspection.
 
-These checks cannot establish semantic truth. A rewrite can reuse all the same numbers and still be misleading. Review scope, causality, attribution and units against the original evidence. The candidate remains responsible for the final document.
+Source links show where a claim came from; they do not independently verify the claim. Review scope, causality, attribution and units against the original evidence before approving the document.
 
 ## Install the skill
 
-Download this repository as a ZIP or clone it. Copy **only** `skills/grounded-resume` into your Codex skills directory (usually `~/.codex/skills`, or `$CODEX_HOME/skills` when configured). On Windows the home shortcut refers to your user directory. Start a new Codex session and invoke:
+Download this repository as a ZIP or clone it. Copy the entire `skills/grounded-resume` folder, including its scripts, examples and dependency list, into the appropriate location:
+
+| Agent | Personal installation | Project installation | Invocation |
+| --- | --- | --- | --- |
+| Codex | `~/.agents/skills/grounded-resume` | `.agents/skills/grounded-resume` | `$grounded-resume` |
+| Claude Code | `~/.claude/skills/grounded-resume` | `.claude/skills/grounded-resume` | `/grounded-resume` |
+
+On Windows, `~` refers to your user directory. These paths follow the current [Codex](https://developers.openai.com/codex/skills/) and [Claude Code](https://code.claude.com/docs/en/skills) documentation. The skill uses the [Agent Skills format](https://agentskills.io/specification); other hosts need file access, shell execution and image inspection. Claude Code compatibility is based on its documented format, not a completed runtime test.
+
+Install the dependencies below, then start a new agent session. For Codex:
 
 ```text
 Use $grounded-resume to tailor my source profile to this official job description.
 Preserve factual claims, explain gaps, and inspect the generated PDF.
 ```
 
-The skill's scripts require the dependencies below. Copying the skill does not install Python packages or external binaries. Keep your existing personal skill if you have one; this package is a separate, generalized version.
+Copying the skill does not install Python packages or external binaries. The copied folder includes everything this package supplies; see its `references/workflow.md` for commands that work without the original repository.
 
 ## Run the fictional demo
 
@@ -65,7 +92,13 @@ All bundled candidate and job examples are fictional. Keep real profiles, applic
 
 Local Python execution does not make an AI-assisted session offline: your assistant's host may process supplied content according to its own settings. This repository does not configure those settings. Do not include confidential employer data in source profiles.
 
-For a portfolio, describe what the implementation actually does: source-linked selection, deterministic validation, document generation and human review. For applications, follow each employer or university's current rules about AI assistance. The tool does not establish permission to use AI in a particular process.
+For applications, follow each employer or university's current rules about AI assistance.
+
+## Limitations
+
+Automated checks cannot establish semantic truth. A rewrite can reuse the same numbers and still be misleading. Source profiles are supplied and reviewed by the candidate, not independently authenticated by this tool.
+
+Keyword matches are ranking hints, not qualifications or ATS scores. This utility does not submit applications or guarantee interviews. Its checks and visual review support, rather than replace, the candidate's final content review.
 
 ## Development and verification
 
