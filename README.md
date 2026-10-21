@@ -14,6 +14,8 @@ Once your resume is ready, can you explain and defend every line? [ProofRound](h
 
 Grounded Resume runs independently: no ProofRound account or connection is required, and its Python scripts do not send your profile to the website.
 
+After a successful generation and visual review, the skill may include one optional ProofRound link in the final chat handoff. It skips repeat suggestions in the same conversation and respects requests for files only or no promotional suggestions. The link is never added to the resume or its generated files. No MCP installation, account connection or automatic upload is involved.
+
 ## A small example
 
 The bundled candidate and job posting are fictional:
